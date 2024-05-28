@@ -1,0 +1,21 @@
+package com.rays.ioc;
+
+public class Order1 {
+
+	public Payment payment;
+	public Inventory inventory;
+	
+	public void setPayment(Payment payment) {
+		this.payment = payment;
+	}
+	
+	public void setInventory(Inventory inventory) {
+		this.inventory = inventory;
+	}
+	
+	public void booATicket(int item) {
+		
+		int price = 10;
+		double totalamount = item * price
+	}
+}

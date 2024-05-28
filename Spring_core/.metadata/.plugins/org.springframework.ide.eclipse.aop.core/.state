@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="spring-jdbc-dao"/>
+<aop-project name="spring-hibernate-dao"/>
+<aop-project name="springcore"/>
+</aop-reference-model>

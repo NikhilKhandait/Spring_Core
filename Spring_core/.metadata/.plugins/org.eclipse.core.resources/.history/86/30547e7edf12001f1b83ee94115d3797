@@ -1,0 +1,20 @@
+package com.rays.ioc;
+
+public class Order2 {
+	
+		public Payment payment;
+		private Inventory inventory;
+		
+		public Order2(Payment payment,Inventory inventory) {
+			
+			this.payment = payment;
+			this.inventory = inventory;
+		}
+			public void bookATicket(int items) {
+				
+				int items = 10;
+				
+				
+			}
+				
+}

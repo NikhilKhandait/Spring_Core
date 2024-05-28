@@ -1,0 +1,10 @@
+package com.rays.ioc;
+
+import org.springframework.beans.factory.annotation.Value;
+
+public class Inventory {
+	
+@Value (value) = "5000";
+
+	
+}

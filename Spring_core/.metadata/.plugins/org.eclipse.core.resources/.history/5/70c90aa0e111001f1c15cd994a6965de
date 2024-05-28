@@ -1,0 +1,7 @@
+package com.rays.bean;
+
+public class Person {
+	
+	public String address;
+
+}

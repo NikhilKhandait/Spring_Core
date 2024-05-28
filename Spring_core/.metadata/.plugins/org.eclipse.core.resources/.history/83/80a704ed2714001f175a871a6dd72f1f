@@ -1,0 +1,15 @@
+package com.rays.primary;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.sun.tools.javac.util.Context;
+
+public class TestNotificationService {
+	
+	ApplicationContext context = new ClassPathXmlApplicationContext("PrimaryService.xml");
+	
+	Context.get
+
+
+}

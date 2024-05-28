@@ -1,0 +1,10 @@
+package com.rays.primary;
+
+public class MessageService {
+
+	public interface MessageService {
+
+		public void sendMessage(String message);
+	}
+
+}

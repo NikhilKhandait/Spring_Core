@@ -1,0 +1,8 @@
+package com.rays.ioc;
+
+public class Payment {
+	
+	double balance = 0;
+	
+
+}

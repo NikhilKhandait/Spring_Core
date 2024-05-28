@@ -1,0 +1,12 @@
+package com.rays.dto;
+
+public class UserDTO {
+
+	
+	protected long id;
+	private String firstName;
+	private String lastName;
+	private String login;
+	private String pasword;
+	
+}

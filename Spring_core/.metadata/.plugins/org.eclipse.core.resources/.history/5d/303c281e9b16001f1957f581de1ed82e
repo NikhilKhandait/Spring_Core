@@ -1,0 +1,25 @@
+package com.rays.test;
+
+@Compoimport org.springframework.stereotype.Component;
+
+nent
+import com.rays.dto.UserDTO;
+
+public class TestUserService {
+
+	public static void main(String[] args) {
+		
+		testAdd();
+	}
+
+	private static void testAdd() {
+		
+		UserDTO dto = new UserDTO();
+		dto.setId(1);
+		dto.setFirstName("nikhil");
+		dto.setLastName("khandait");
+		dto.setLogin("nikhil@gmail");
+		dto.setPassword("nikhil123");
+		
+	}
+}

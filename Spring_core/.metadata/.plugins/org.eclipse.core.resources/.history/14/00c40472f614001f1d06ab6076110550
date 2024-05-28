@@ -1,0 +1,71 @@
+package com.rays.dao;
+
+import java.util.List;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.rays.dto.UserDTO;
+
+@Repository
+public class UserDAOJDBCImp implements UserDAOInt {
+
+	private JdbcTemplate jdbcTemplate;
+
+	@Autowired
+	public void setDataSource(DataSource dataSource) {
+		this.jdbcTemplate = new JdbcTemplate(dataSource);
+	}
+
+	public long add(UserDTO dto) {
+
+		String sql = "INSERT INTO USERDAO VALUES(?,?,?,?,?)";
+		int pk = jdbcTemplate.update(sql, dto.getId(), dto.getFirstName(), dto.getLastName(), dto.getLogin(),
+				dto.getPassword());
+		return pk;
+
+	}
+
+	public void update(UserDTO dto) {
+		String sql = "UPDATE USERDAO SET FIRST_NAME = ?, LAST_NAME = ?, LOGIN = ?, PASSWORD = ? WHERE ID = ?";
+
+		int i = jdbcTemplate.update(sql, dto.getFirstName(), dto.getLastName(), dto.getLogin(), dto.getPassword(),
+				dto.getId());
+		System.out.println("updated...jdbcimp...");
+	}
+
+	public void delete(long id) {
+		String sql = "DELETE FROM USERDSO WHERE ID =?";
+		 Object[] params ={id};
+		int i = jdbcTemplate.update(sql,id);
+	}
+
+	public UserDTO findByLogin(String login) {
+		
+		return null;
+	}
+
+	public UserDTO authenticate(String login, String password) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public UserDTO findByPK(long pk) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List search(UserDTO dto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List search(UserDTO dto, int pageNo, int pageSize) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

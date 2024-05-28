@@ -1,0 +1,28 @@
+package com.rays.test;
+
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.stereotype.Component;
+
+import com.rays.dto.UserDTO;
+
+@Component("testUserService")
+public class TestUserService {
+
+	public static ApplicationContext = null;
+	public static void main(String[] args) {
+		
+		testAdd();
+	}
+
+	private static void testAdd() {
+		
+		UserDTO dto = new UserDTO();
+		dto.setId(1);
+		dto.setFirstName("nikhil");
+		dto.setLastName("khandait");
+		dto.setLogin("nikhil@gmail");
+		dto.setPassword("nikhil123");
+		
+	}
+}

@@ -1,0 +1,28 @@
+package com.rays.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.rays.bean.PersonBean;
+import com.rays.bean.UserBean;
+
+public class MultipleTest {
+	
+public static void main(String[] args) {
+	
+	UserBean bean;
+	PersonBean bean;
+	
+	ApplicationContext context = new ClassPathXmlApplicationContext(new String[] {"user","person"});
+	
+	bean = (UserBean) context.getBean("UserBean");
+	
+	System.out.println(bean.getName());
+	System.out.println(bean.getLogin());
+	System.out.println(bean.getPassword());
+	
+	
+	
+}
+
+}
